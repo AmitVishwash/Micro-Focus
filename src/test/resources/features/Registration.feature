@@ -5,7 +5,7 @@ Feature: New user Registration on Ebay application
     When User Clicks on Register link on Home Page of Ebay Application
     And User provides First name, Last name, Email and Password as "<firstName>", "<lastName>", "<email>", "<password>"
     Then Create account button should get enabled
-    When User Clicks on Create account button
+    #When User Clicks on Create account button
     #Then User should be navigated to User Sign-in Page
     #And User should see the profile name displayed as "<firstName>"
 

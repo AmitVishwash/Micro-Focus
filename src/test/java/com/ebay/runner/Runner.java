@@ -12,7 +12,8 @@ import org.junit.runner.RunWith;
                tags = "@signin",
                monochrome = true,
                stepNotifications = true,
-               plugin = {"pretty","json:target/cucumber.json","html:target/cucumber.html"}
+               plugin = {"pretty","json:target/cucumber.json","html:target/cucumber.html"},
+               publish = true
 )
 public class Runner {
 }
