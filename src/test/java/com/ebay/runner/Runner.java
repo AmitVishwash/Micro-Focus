@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
                features = "src/test/resources/features/Registration.feature",
                glue="com.ebay.stepdef",
-               tags = "@1",
+               tags = "@signin",
                monochrome = true,
                stepNotifications = true,
                plugin = {"pretty","json:target/cucumber.json","html:target/cucumber.html"}

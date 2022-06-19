@@ -86,6 +86,10 @@ public class EbaySignInPage {
     public WebElement searchForAnythingTextBox;
 
 
+    @FindBy(xpath="//p[@id='errormsg']")
+    public WebElement pwdErrorMessage;
+
+
 
 
     public void isSignInPageDisplayed(){
@@ -146,7 +150,7 @@ public class EbaySignInPage {
     public void isUserSignedInPageDisplayed() {
 
         Assert.assertTrue(actionLibrary.getElementIsDisplayedStatus(dailyDealsMenuBar));
-        Assert.assertTrue(actionLibrary.getElementIsDisplayedStatus(brandOutletMenuBar));
+        //Assert.assertTrue(actionLibrary.getElementIsDisplayedStatus(brandOutletMenuBar));
         Assert.assertTrue(actionLibrary.getElementIsDisplayedStatus(helpContactMenuBar));
         Assert.assertTrue(actionLibrary.getElementIsDisplayedStatus(sellMenuBar));
         Assert.assertTrue(actionLibrary.getElementIsDisplayedStatus(watchListMenuBar));
@@ -165,5 +169,9 @@ public class EbaySignInPage {
 
     public void clickOnProfileName() {
         actionLibrary.clickElement(signedInProfileName);
+    }
+
+    public void checkPasswordErrorMesaage(String errorMessage) {
+        Assert.assertEquals(errorMessage,actionLibrary.getElementText(pwdErrorMessage));
     }
 }

@@ -72,4 +72,8 @@ public class SignInPageImpl {
     }
 
 
+    @Then("User should see password error message {string}")
+    public void userShouldSeePasswordErrorMessage(String errorMessage) {
+        ebaySignInPage.checkPasswordErrorMesaage(errorMessage);
+    }
 }
